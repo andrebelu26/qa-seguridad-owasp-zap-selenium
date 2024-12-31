@@ -1,6 +1,7 @@
 package org.demo.selenium_zap_pom.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.demo.selenium_zap_pom.helpers.reporter;
 import org.demo.selenium_zap_pom.pages.LaptopsPage;
 import org.demo.selenium_zap_pom.pages.MonitorsPage;
 import org.demo.selenium_zap_pom.pages.PhonesPage;
@@ -24,6 +25,7 @@ import java.nio.file.Paths;
 public class AnalisisFinalTest {
     private WebDriver driver;
     private ClientApi api;
+    private reporter reporter;
 
     private static final String ZAP_PROXYHOST = "localhost";
     private static final int ZAP_PROXYPORT = 8050;
@@ -70,7 +72,7 @@ public class AnalisisFinalTest {
     }
 
     public void generarInforme() throws ClientApiException, IOException, InterruptedException {
-        Thread.sleep(6 * 60 * 1000);
+       Thread.sleep(6 * 60 * 1000);
         String report = new String(api.core.htmlreport());
         String folder_report = "scan-results";
             File carpeta = new File(folder_report);
@@ -87,6 +89,7 @@ public class AnalisisFinalTest {
         Path filePath = Paths.get(System.getProperty("user.dir") + "/scan-results/SeleniumTest.html");
         Files.deleteIfExists(filePath);
         Files.write(filePath, report.getBytes());
+       //this.reporter = new reporter(api, driver);
     }
 
     @After
