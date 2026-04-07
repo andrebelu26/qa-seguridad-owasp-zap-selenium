@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: qa-seguridad-owasp-zap-selenium
+  title: QA Seguridad OWASP ZAP + Selenium
+  description: >
+    Proyecto de automatización de pruebas de seguridad que integra OWASP ZAP
+    como proxy de interceptación y escáner de vulnerabilidades con Selenium
+    para la navegación automatizada sobre aplicaciones web.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - java
+    - selenium
+    - owasp-zap
+    - seguridad
+    - automatizacion
+    - qa
+    - allure
+  links:
+    - url: https://www.zaproxy.org/docs/
+      title: Documentación OWASP ZAP
+      icon: security
+    - url: https://allurereport.org/docs/
+      title: Documentación Allure
+      icon: dashboard
+spec:
+  type: library
+  lifecycle: experimental
+  owner: pragma-qa
+  system: qa-seguridad
