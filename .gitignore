@@ -1,0 +1,16 @@
+# Maven
+target/
+
+# Reportes generados en ejecución
+scan-results/
+allure-results/
+
+# Allure CLI descargado localmente por mvn allure:serve
+.allure/
+
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
