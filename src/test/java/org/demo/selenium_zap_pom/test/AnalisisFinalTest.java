@@ -29,15 +29,16 @@ public class AnalisisFinalTest {
 
     private static final String ZAP_PROXYHOST = "localhost";
     private static final int ZAP_PROXYPORT = 8050;
-    private static final String ZAP_API_KEY = "r7pisvfpphtob8lkp15k1m9sj5";
+    private static final String ZAP_API_KEY = "dl63ub0jhlc06ctuh2o8et0pdf";
     private static final String SCAN_URL = "https://www.demoblaze.com/";
 
     @Before
     public void setup() throws ClientApiException {
         //Instanciar inicialmente el objeto proxy
         api = new ClientApi(ZAP_PROXYHOST, ZAP_PROXYPORT, ZAP_API_KEY);
-        Proxy SeleniumProxy = new  Proxy();
-        SeleniumProxy.setProxyAutoconfigUrl("http://"+ZAP_PROXYHOST+":"+ZAP_PROXYPORT);
+        Proxy SeleniumProxy = new Proxy();
+        SeleniumProxy.setHttpProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
+        SeleniumProxy.setSslProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
         api.ascan.removeAllScans();
         api.core.newSession("", "");
         api.spider.scan(SCAN_URL,null,null,null,null);
@@ -94,9 +95,9 @@ public class AnalisisFinalTest {
 
     @After
     public void teardown() {
-
+        if (driver != null) {
             driver.quit();
-
+        }
     }
 }
 

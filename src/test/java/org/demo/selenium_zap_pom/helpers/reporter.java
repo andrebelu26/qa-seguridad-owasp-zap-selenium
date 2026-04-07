@@ -11,7 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class reporter {
-    private clientapiow api = new clientapiow();
 
     public reporter(ClientApi api, WebDriver driver) throws ClientApiException, IOException, InterruptedException{
         Thread.sleep(6 * 60 * 1000);

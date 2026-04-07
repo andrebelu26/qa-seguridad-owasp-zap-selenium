@@ -1,0 +1,12 @@
+# Created at 2026-04-06T18:46:56.164
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+
+# Created at 2026-04-06T18:46:56.166
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/Users/yolima.beltran/.m2/repository/io/netty/netty-common/4.1.113.Final/netty-common-4.1.113.Final.jar)
+
+# Created at 2026-04-06T18:46:56.167
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+
+# Created at 2026-04-06T18:46:56.169
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+

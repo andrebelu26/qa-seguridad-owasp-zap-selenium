@@ -1,0 +1,8 @@
+org/demo/selenium_zap_pom/test/AnalisisFinalTest.class
+org/demo/selenium_zap_pom/pages/LaptopsPage.class
+org/demo/selenium_zap_pom/pages/PhonesPage.class
+org/demo/selenium_zap_pom/helpers/reporter.class
+org/demo/selenium_zap_pom/helpers/clientapiow.class
+org/demo/selenium_zap_pom/helpers/locators.class
+org/demo/selenium_zap_pom/pages/BasePage.class
+org/demo/selenium_zap_pom/pages/MonitorsPage.class

@@ -19,8 +19,9 @@ public class clientapiow {
 
     public clientapiow() throws ClientApiException{
         api = new ClientApi(ZAP_PROXYHOST, ZAP_PROXYPORT, ZAP_API_KEY);
-        Proxy SeleniumProxy = new  Proxy();
-        SeleniumProxy.setProxyAutoconfigUrl("http://"+ZAP_PROXYHOST+":"+ZAP_PROXYPORT);
+        Proxy SeleniumProxy = new Proxy();
+        SeleniumProxy.setHttpProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
+        SeleniumProxy.setSslProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
         api.ascan.removeAllScans();
         api.core.newSession("", "");
         api.spider.scan(SCAN_URL,null,null,null,null);
